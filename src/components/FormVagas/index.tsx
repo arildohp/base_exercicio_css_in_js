@@ -1,6 +1,9 @@
-import { FormEvent, useState } from 'react'
+import { FormEvent, SetStateAction, useState } from 'react'
+import { Formulario } from './styles'
+import { BotaoPesquisar } from './styles'
+import { NovoCampo } from './styles'
 
-import styles from './FormVagas.module.css'
+
 
 type Props = {
   aoPesquisar: (termo: string) => void
@@ -14,18 +17,18 @@ const FormVagas = ({ aoPesquisar }: Props) => {
     aoPesquisar(termo.toLocaleLowerCase())
   }
 
-  return (
-    <form className={styles.form} onSubmit={aoEnviarForm}>
-      <input
-        className={styles.campo}
-        placeholder="Front-end, fullstack, node, design"
-        onChange={(e) => setTermo(e.target.value)}
-        type="search"
-      />
-      <button className={styles.btnPesquisar} type="submit">
+return (
+  <Formulario  onSubmit={aoEnviarForm}>
+    <NovoCampo
+      placeholder="Front-end, fullstack, node, design"
+       onChange={(e: { target: { value: SetStateAction<string> } }) => setTermo(e.target.value)}
+       type="search"
+   />
+      <BotaoPesquisar type="submit">
         Pesquisar
-      </button>
-    </form>
+      </BotaoPesquisar>
+    </Formulario>
   )
 }
 export default FormVagas
+
