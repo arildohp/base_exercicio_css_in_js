@@ -7,6 +7,11 @@ export const NovasVagas = styled.li`
   padding: 16px;
   transition: all ease .3s;
   border-radius: 8px;
+
+  &:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+  }
 `
 
 export const VagaTitulo = styled.h3`
@@ -26,15 +31,11 @@ export const VagaLink = styled.a`
   font-size: 14px;
   border-radius: 8px;
   text-align: center;
+  cursor: pointer;
 
 
 
-  :hover {
-    background-color: var(--cor-principal);
-    color: var(--cor-secundaria);
-  }
-
-  :hover VagaLink {
+  &:hover {
     border-color: var(--cor-principal);
     background-color: var(--cor-secundaria);
     color: var(--cor-principal);

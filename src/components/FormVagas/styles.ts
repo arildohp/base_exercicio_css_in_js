@@ -10,8 +10,9 @@ export const Formulario = styled.form`
 `
 
 export const BotaoPesquisar =styled.button`
+  border-color: var(--cor-secundaria);
   background-color: var(--cor-principal);
-  border: 1px solid var(--cor-principal);
+  color: var(--cor-secundaria);
   height: 40px;
   padding: 0 16px;
   font-size: 18px;
